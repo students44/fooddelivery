@@ -5,7 +5,12 @@
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-    padding: 20px 0px;
+}
+.navbar .logo{
+    width: 120px;
+    height: 120px;
+    margin-left: 130px;
+    cursor: pointer;
 }
 .menu-list{
     display: flex;
@@ -14,4 +19,47 @@
     list-style-type: none;
     color: #394468;
     font-size: 18px;
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 150px;
+}
+.navbar button{
+    background: transparent;
+    border: 1px solid #394468;
+    padding: 12px 20px;
+    border-radius: 40px;
+    color: #394468;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.navbar button:hover{
+    background-color: #394468;
+    color: #fff;
+}
+.navbar .active{
+    transform: scale(0.95);
+    padding-bottom: 2px;
+    border-bottom: 2px solid #394468;
+}
+
+.navbar li{
+    cursor: pointer;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 8px;
+    min-height: 8px;
+    background-color: #394468;
+    border-radius: 50%;
+    top: 41px;
+    right: 261px;
+    transform: translate(50%, -50%);
+    box-shadow: 0 0 0 2px #fff;
+    transition: all 0.3s ease;
 }

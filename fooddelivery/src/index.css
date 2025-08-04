@@ -1,7 +1,18 @@
+
+/* 
+  This file is part of the Food Delivery project.
+  It contains global styles and imports necessary for the application.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
 *{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
