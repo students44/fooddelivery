@@ -7,15 +7,23 @@
 .header-contents{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    max-width: 50%;
+    left: 16vw;
+    position: absolute;
     justify-content: center;
     height: 100%;
     color: #fff;
+    animation: fadeIn 1s ease-in-out;
 
 }
 .header-contents h2{
     font-weight: 600;
     font-size: max(3.5vw);
+}
+.header-contents p{
+    font-weight: 500;
+    font-size: max(1.2vw);
 }
 .header-contents button{
     background-color: white;
@@ -27,4 +35,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 10px;
+}
+.header-contents button:hover{
+    background-color: #394468;
+    color: #fff;
 }
