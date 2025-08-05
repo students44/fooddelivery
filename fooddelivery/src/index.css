@@ -22,8 +22,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.app{
-  width: 80%;
+.App{
+  width: 80% !important;
   margin: auto;
 }
 

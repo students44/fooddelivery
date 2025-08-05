@@ -9,7 +9,7 @@
 .navbar .logo{
     width: 120px;
     height: 120px;
-    margin-left: 130px;
+    /* margin-left: 130px; */
     cursor: pointer;
 }
 .menu-list{
@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-right: 150px;
+    /* margin-right: 150px; */
 }
 .navbar button{
     background: transparent;
@@ -58,7 +58,7 @@
     background-color: #394468;
     border-radius: 50%;
     top: 41px;
-    right: 261px;
+    right: 269px;
     transform: translate(50%, -50%);
     box-shadow: 0 0 0 2px #fff;
     transition: all 0.3s ease;
