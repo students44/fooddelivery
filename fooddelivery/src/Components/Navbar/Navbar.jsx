@@ -26,10 +26,11 @@ const Navbar = () => {
      <div className="navbar-right">
       <img src={assets.search_icon} alt="Search icon" />
 
-      <div className='navbar-search-icon'>
-        <img src={assets.basket_icon} alt=" basket icon" />
-        <div className='dot'></div>
-      </div>
+     <div className='navbar-search-icon'>
+  <img src={assets.basket_icon} alt="basket icon" />
+  <div className='dot'></div>
+</div>
+
 
        <button className='sign-in'>Sign in</button>
      </div>
