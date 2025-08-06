@@ -72,3 +72,19 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 
 }   
+
+@media (max-width: 900px) {
+
+    .explore-menu-list img {
+        width: 80%;
+        max-width: 200px;
+    }
+    .explore-menu-text {
+        width: 100%;
+         text-align: justify;
+         line-height: 1.5;
+         font-size: 16px;
+        max-width: 90%;
+    }
+
+}
