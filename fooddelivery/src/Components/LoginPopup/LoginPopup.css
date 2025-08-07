@@ -217,6 +217,16 @@
 .login-popup-toggle span:hover {
   color: #394468;
 }
+.toggle-password-visibility {
+  position: absolute;
+  right: 10px;
+  top: 66%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.2rem;
+  color: #888;
+}
 /* media queries */
 @media (max-width: 500px) {
   .login-popup-container {

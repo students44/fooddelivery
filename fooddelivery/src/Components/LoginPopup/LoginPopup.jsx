@@ -11,6 +11,8 @@ const LoginPopup = ({ onClose }) => {
   const [termsAccepted, setTermsAccepted] = useState(false);
   const formRef = useRef(null);
   const [showAlert, setShowAlert] = useState(false);
+  // Add showPassword state after other useState hooks
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -84,17 +86,30 @@ const LoginPopup = ({ onClose }) => {
               required
             />
           </div>
-          <div className="login-popup-field">
+          <div className="login-popup-field" style={{ position: 'relative' }}>
             <label htmlFor="password">Password</label>
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               id="password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
               required
+              style={{ paddingRight: '2.5rem' }}
             />
+            <span className="toggle-password-visibility"
+              onClick={() => setShowPassword((prev) => !prev)}
+              style={{
+               
+              }}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              tabIndex={0}
+              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setShowPassword((prev) => !prev); }}
+            >
+              {showPassword ? '🙈' : '👁️'}
+            </span>
           </div>
+
           <div className="login-popup-condition">
             <input
               checked={termsAccepted}
