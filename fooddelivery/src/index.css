@@ -13,6 +13,7 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,6 +28,7 @@ a {
   margin: auto;
 }
 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -35,3 +37,6 @@ a {
     opacity: 1;
   }
 }
+
+
+

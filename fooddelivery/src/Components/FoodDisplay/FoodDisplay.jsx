@@ -8,6 +8,7 @@ const FoodDisplay = ({ category }) => {
 
   return (
     <div className='food-display' id='food-display'>
+
       <h2>Top dishes Near to you</h2>
 
       <div className="food-display-list">

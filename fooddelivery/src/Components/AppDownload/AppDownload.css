@@ -29,3 +29,13 @@
 .app-download-platform img:hover{
     transform: scale(1.05);;
 }
+.app-download {
+  padding: 20px;
+  text-align: center;
+}
+
+.app-download-platform img {
+  width: 150px;
+  margin: 10px;
+  cursor: pointer;
+}

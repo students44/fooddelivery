@@ -12,6 +12,19 @@
     /* margin-left: 130px; */
     cursor: pointer;
 }
+.logo:hover {
+  animation: rotateLogo 1s linear infinite;
+}
+
+@keyframes rotateLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .menu-list{
     display: flex;
     align-items: center;
