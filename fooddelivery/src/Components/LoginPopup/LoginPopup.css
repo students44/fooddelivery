@@ -119,13 +119,10 @@
 .swirl-animate {
   animation: swirl 0.5s ease-in-out;
 }
- 
-
-
+.login-popup-container:hover {
+  animation: swirl 0.5s ease-in-out;
+}
 /* end */
-
-
-
 .login-popup-title-row {
   display: flex;
   align-items: center;
@@ -220,7 +217,7 @@
 .login-popup-toggle span:hover {
   color: #394468;
 }
-
+/* media queries */
 @media (max-width: 500px) {
   .login-popup-container {
     padding: 18px 6vw 16px 6vw;
@@ -230,11 +227,6 @@
     font-size: 1.1rem;
   }
 }
-
-
-
-/* media queries */
-
 @media (max-width: 768px) {
   .login-popup-container {
     max-width: 90vw;
