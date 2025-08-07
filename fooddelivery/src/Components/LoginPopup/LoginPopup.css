@@ -1,3 +1,31 @@
+/* Alert for successful form submission */
+.login-popup-alert {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  background: linear-gradient(90deg, #4caf50 60%, #6fdc8c 100%);
+  color: #fff;
+  padding: 18px 32px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 24px rgba(76, 175, 80, 0.18);
+  z-index: 2000;
+  opacity: 0.98;
+  animation: slideInRight 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+  scroll-behavior: smooth;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.98;
+  }
+}
 /* Modern, responsive login/signup popup styles */
 .login-popup {
   position: fixed;
@@ -35,7 +63,67 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+   overflow: hidden;
 }
+/* Keyframes for blinking */
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Tiny square gradient bullets with blinking */
+.login-popup-container::before,
+.login-popup-container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  box-shadow: 0 0 6px 2px rgba(255, 110, 196, 0.4);
+  z-index: 1;
+  animation: blink 1.5s infinite ease-in-out;
+}
+
+.login-popup-container::before {
+  top: 9px;
+  left: 9px;
+}
+
+.login-popup-container::after {
+  bottom: 6px;
+  right: 6px;
+}
+
+
+/* swirl animation */
+@keyframes swirl {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05) rotate(5deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.swirl-animate {
+  animation: swirl 0.5s ease-in-out;
+}
+ 
+
+
+/* end */
+
 
 
 .login-popup-title-row {
@@ -140,5 +228,23 @@
   }
   .login-popup-title {
     font-size: 1.1rem;
+  }
+}
+
+
+
+/* media queries */
+
+@media (max-width: 768px) {
+  .login-popup-container {
+    max-width: 90vw;
+    padding: 24px 16px;
+  }
+  .login-popup-title {
+    font-size: 1.3rem;
+  }
+  .login-popup-close {
+    width: 18px;
+    height: 18px;
   }
 }
