@@ -99,9 +99,6 @@ const LoginPopup = ({ onClose }) => {
             />
             <span className="toggle-password-visibility"
               onClick={() => setShowPassword((prev) => !prev)}
-              style={{
-               
-              }}
               aria-label={showPassword ? 'Hide password' : 'Show password'}
               tabIndex={0}
               onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setShowPassword((prev) => !prev); }}
