@@ -5,7 +5,7 @@ import FoodItem from '../../Components/Fooditem/FoodItem';
 
 const Cart = () => {
 
- const {cartItems, food_list, removeFrom} = useContext(StoreContext);
+ const {cartItems, food_list, removeFromCart} = useContext(StoreContext);
  
  console.log(cartItems, food_list);
 
@@ -34,7 +34,7 @@ const Cart = () => {
                     <td>₹ {item.price}</td>
                     <td>{cartItems[item._id]}</td>
                     <td>₹ {item.price * cartItems[item._id]}</td>
-                    <td><button onClick={() => removeFrom(item._id)} className='remove-item'>Remove</button></td>
+                    <td><button onClick={() => removeFromCart(item._id)} className='remove-item'>Remove</button></td>
                   </tr>
                 );
               }
