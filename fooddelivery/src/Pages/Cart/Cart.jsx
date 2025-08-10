@@ -74,8 +74,9 @@ const Cart = () => {
           If you have a promo code, please enter it below
 
         </p>
-        <div>
-          
+        <div className='cart-promoCode-input'>
+          <input type="text" placeholder='Enter promo code' />
+          <button className='apply-promoCode'>Apply</button>
         </div>
       </div>
     </div>
