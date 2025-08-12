@@ -44,6 +44,9 @@ const Cart = () => {
         </table>
       </div>
 
+
+      {/* cart bottom */}
+
       <div className='cart-bottom'>
     <div className="cart-total">
       <h2>Cart totals</h2>
@@ -65,7 +68,10 @@ const Cart = () => {
 
         
       </div>
+      <div className="proceed-parent">
     <button className='proceed-checkout'>Proceed Checkout</button>
+      </div>
+
     </div>
 
     <div className="cart-promoCode">
@@ -76,7 +82,7 @@ const Cart = () => {
         </p>
         <div className='cart-promoCode-input'>
           <input type="text" placeholder='Enter promo code' />
-          <button className='apply-promoCode'>Apply</button>
+          <button className='apply-promoCode'>submit</button>
         </div>
       </div>
     </div>

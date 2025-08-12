@@ -1,3 +1,4 @@
+
 /* Grid system for cart table */
 .cart-table {
   width: 100%;
@@ -71,6 +72,124 @@
   color: #394468;
   margin-bottom: 20px;
 }
+
+
+.cart-bottom{
+  /* background-color: red; */
+  margin-top: 90px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.cart-total {
+  /* background: linear-gradient(135deg, #fdfbfb 29%, #e2f6fa 58%, #ffe9f5 80%); */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(170, 247, 244, 0.13), 0 20px 18px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #394468;
+  font-weight: 500;
+}
+.proceed-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  /* max-width: 200px !important; */
+}
+.proceed-checkout{
+   background: #43c6ac;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 1px 4px rgba(67, 198, 172, 0.10);
+
+}
+.proceed-checkout:hover {
+  background: #e2f6fa;
+  color: #191654;
+}
+
+
+/* promo code css */
+.cart-promoCode {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 40px 24px 40px 24px;
+  max-width: 340px;
+  min-width: 220px;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 85px;
+}
+.cart-promoCode p {
+  font-size: 1.08rem;
+  color: #394468;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.cart-promoCode-input {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 30px;
+}
+.cart-promoCode-input input[type="text"] {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #b0b8c1;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  /* margin-top: 20px; */
+}
+.cart-promoCode-input input[type="text"]:focus {
+  border: 1.5px solid #43c6ac;
+}
+.apply-promoCode {
+  background: #43c6ac;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 1px 4px rgba(67, 198, 172, 0.10);
+}
+.apply-promoCode:hover {
+  background: #e2f6fa;
+  color: #191654;
+}
+.cart-total-details,
+.cart-total-details,
+.cart-total-details{
+  padding: 10px 0px;
+}
+
+
 
 
 /* media queries */
