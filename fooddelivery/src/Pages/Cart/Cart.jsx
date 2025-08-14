@@ -5,7 +5,7 @@ import FoodItem from '../../Components/Fooditem/FoodItem';
 
 const Cart = () => {
 
- const {cartItems, food_list, removeFromCart} = useContext(StoreContext);
+ const {cartItems, food_list, removeFromCart, getTotalItems} = useContext(StoreContext);
  
  console.log(cartItems, food_list);
 
@@ -53,7 +53,7 @@ const Cart = () => {
       <div>
         <div className="cart-total-details">
           <p>Sub total</p>
-          <p>{0}</p>
+          <p>{getTotalItems()}</p>
         </div>
         <hr />
         <div className="cart-total-details">
@@ -63,7 +63,7 @@ const Cart = () => {
         <hr />
         <div className="cart-total-details">
           <b>Total</b>
-          <b>{0}</b>
+          <b>{getTotalItems() +2}</b>
         </div>
 
         
