@@ -53,17 +53,17 @@ const Cart = () => {
       <div>
         <div className="cart-total-details">
           <p>Sub total</p>
-          <p>{getTotalItems()}</p>
+          <p><span style={{marginRight:'1px'}}>$</span>{getTotalItems()}</p>
         </div>
         <hr />
         <div className="cart-total-details">
           <p>Delivery fee</p>
-          <p>{2}</p>
+          <p><span style={{marginRight:'1px'}}>$</span>{2}</p>
         </div>
         <hr />
         <div className="cart-total-details">
           <b>Total</b>
-          <b>{getTotalItems() +2}</b>
+          <b><span style={{marginRight:'1px'}}>$</span>{getTotalItems() +2}</b>
         </div>
 
         

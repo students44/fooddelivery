@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/frontend_assets/assets'
 import { useState } from 'react'
+import { StoreContext } from '../../Context/StoreContext';
 import { Link } from 'react-router-dom'
 
 const Navbar = ({setShowLogin}) => {
@@ -9,7 +10,13 @@ const Navbar = ({setShowLogin}) => {
   // Function to handle login button click
 
   // state for navbar menu
-  const [menu, setMenu] =useState("home");
+  const [menu, setMenu] = useState("home");
+
+  // Get cart items from context
+  const { cartItems } = useContext(StoreContext);
+  // Calculate total items in cart
+  const cartCount = Object.values(cartItems || {}).reduce((sum, qty) => sum + (qty || 0), 0);
+  
 
 
 
@@ -27,10 +34,16 @@ const Navbar = ({setShowLogin}) => {
      <div className="navbar-right">
       <img src={assets.search_icon} alt="Search icon" />
 
-     <div className='navbar-search-icon'>
-    <Link to= '/Cart'><img src={assets.basket_icon} alt="basket icon" /></Link> 
-  <div className='dot'></div>
+
+    <div className='navbar-search-icon'>
+  <Link to='/Cart'>
+    <img src={assets.basket_icon} alt="basket icon" />
+  </Link>
+  {cartCount > 0 && (
+    <div className='cart-count'>{cartCount}</div>
+  )}
 </div>
+
 
 
        <button onClick={()=>setShowLogin(true)} className='sign-in'>Sign in</button>
