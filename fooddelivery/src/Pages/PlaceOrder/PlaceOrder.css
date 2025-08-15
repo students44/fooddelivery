@@ -1,0 +1,111 @@
+
+.placeorder-form {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 28px 24px 28px;
+  max-width: 1000px; 
+  width: 100%;
+  display: flex;
+  gap: 24px; 
+  margin-left: 150px;
+}
+.placeorder-left {
+  flex: 2; /* larger portion for form */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.placeorder-right {
+  flex: 1; /* smaller portion for cart */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-total {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.placeorder-form h2 {
+  margin-bottom: 8px;
+  color: #394468;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-size: 1rem;
+  color: #394468;
+  font-weight: 500;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #b0b0b0;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border: 1.5px solid #43c6ac;
+}
+.placeorder-btn {
+  background: #43c6ac;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.placeorder-btn:hover {
+  background: #394468;
+}
+
+
+@media (max-width: 1000px) {
+    .placeorder-form {
+    margin-left: 0px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .placeorder-form {
+    flex-direction: column; /* stack for mobile */
+  }
+    .placeorder-form {
+    margin-left: 0px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .placeorder-form {
+    padding: 18px 6vw 16px 6vw;
+    max-width: 98vw;
+  }
+  .placeorder-form {
+    margin-left: 0px;
+  }
+  .placeorder-form h2 {
+    font-size: 1.1rem;
+  }
+}
