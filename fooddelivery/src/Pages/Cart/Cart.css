@@ -132,8 +132,8 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   padding: 40px 24px 40px 24px;
-  max-width: 340px;
-  min-width: 220px;
+  max-width: 390px;
+  min-width: 280px;
   margin-left: 18px;
   display: flex;
   flex-direction: column;
