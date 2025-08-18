@@ -4,11 +4,11 @@
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   padding: 32px 28px 24px 28px;
-  max-width: 1000px; 
+  max-width: 1150px; 
   width: 100%;
   display: flex;
   gap: 24px; 
-  margin-left: 150px;
+  margin-left: 110px;
 }
 .placeorder-left {
   flex: 2; /* larger portion for form */
@@ -17,11 +17,53 @@
   gap: 18px;
 }
 .placeorder-right {
-  flex: 1; /* smaller portion for cart */
+  margin-top: 80px;
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  position: relative;
+  padding: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
 }
+
+/* Border Reveal Lines */
+.placeorder-right::before,
+.placeorder-right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 3px solid transparent;
+  pointer-events: none;
+}
+
+.placeorder-right::before {
+  border-top-color: #00f5ff;
+  border-right-color: #00c3ff;
+  border-bottom-color: #008cff;
+  border-left-color: #00e0ff;
+  clip-path: inset(0 100% 100% 0);
+  transition: clip-path 0.8s linear;
+}
+
+.placeorder-right::after {
+  border-color: #f87171;
+  clip-path: inset(100% 0 0 100%);
+  transition: clip-path 0.8s linear 0.8s; /* delay for sequential effect */
+}
+
+.placeorder-right:hover::before {
+  clip-path: inset(0 0 0 0);
+}
+
+.placeorder-right:hover::after {
+  clip-path: inset(0 0 0 0);
+}
+
 
 .cart-total {
   background: #f8fafc;
