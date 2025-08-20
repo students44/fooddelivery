@@ -6,11 +6,17 @@ import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
- const {cartItems, food_list, removeFromCart, getTotalItems} = useContext(StoreContext);
+ const {cartItems, food_list, removeFromCart, getTotalItems , clearCart} = useContext(StoreContext);
  
  console.log(cartItems, food_list);
 
  const navigate = useNavigate();
+
+ const handleProceedCheckout = () => {
+    clearCart();           // Clear all items in the cart
+    navigate('/order');    // Navigate to order/payment page
+};
+
 
 
   return (
@@ -53,24 +59,26 @@ const Cart = () => {
       <div className='cart-bottom'>
     <div className="cart-total">
       <h2>Cart totals</h2>
-      <div>
-        <div className="cart-total-details">
-          <p>Sub total</p>
-          <p><span style={{marginRight:'1px'}}>$</span>{getTotalItems()}</p>
-        </div>
-        <hr />
-        <div className="cart-total-details">
-          <p>Delivery fee</p>
-          <p><span style={{marginRight:'1px'}}>$</span>{getTotalItems() === 0 ? 0 : 2}</p>
-        </div>
-        <hr />
-        <div className="cart-total-details">
-          <b>Total</b>
-          <b><span style={{marginRight:'1px'}}>$</span>{getTotalItems() +2}</b>
-        </div>
+     <div>
+  <div className="cart-total-details">
+    <p>Sub total</p>
+    <p><span style={{marginRight:'1px'}}>$</span>{getTotalItems()}</p>
+  </div>
+  <hr />
+  <div className="cart-total-details">
+    <p>Delivery fee</p>
+    <p><span style={{marginRight:'1px'}}>$</span>{getTotalItems() === 0 ? 0 : 2}</p>
+  </div>
+  <hr />
+  <div className="cart-total-details">
+    <b>Total</b>
+    <b>
+      <span style={{marginRight:'1px'}}>$</span>
+      {getTotalItems() + (getTotalItems() === 0 ? 0 : 2)}
+    </b>
+  </div>
+</div>
 
-        
-      </div>
       <div className="proceed-parent">
     <button className='proceed-checkout' onClick={()=>navigate('/order')}>Proceed Checkout</button>
       </div>
