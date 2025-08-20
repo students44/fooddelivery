@@ -6,16 +6,16 @@ import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
- const {cartItems, food_list, removeFromCart, getTotalItems , clearCart} = useContext(StoreContext);
+ const {cartItems, food_list, removeFromCart, getTotalItems ,} = useContext(StoreContext);
  
  console.log(cartItems, food_list);
 
  const navigate = useNavigate();
 
- const handleProceedCheckout = () => {
-    clearCart();           // Clear all items in the cart
-    navigate('/order');    // Navigate to order/payment page
-};
+//  const handleProceedCheckout = () => {
+//     clearCart();           
+//     navigate('/order');    
+// };
 
 
 
