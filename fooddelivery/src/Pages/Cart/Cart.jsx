@@ -61,7 +61,7 @@ const Cart = () => {
         <hr />
         <div className="cart-total-details">
           <p>Delivery fee</p>
-          <p><span style={{marginRight:'1px'}}>$</span>{2}</p>
+          <p><span style={{marginRight:'1px'}}>$</span>{getTotalItems() === 0 ? 0 : 2}</p>
         </div>
         <hr />
         <div className="cart-total-details">

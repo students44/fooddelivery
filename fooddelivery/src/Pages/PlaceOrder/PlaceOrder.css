@@ -30,39 +30,7 @@
   background: #fff;
 }
 
-/* Border Reveal Lines */
-.placeorder-right::before,
-.placeorder-right::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  border: 3px solid transparent;
-  pointer-events: none;
-}
 
-.placeorder-right::before {
-  border-top-color: #00f5ff;
-  border-right-color: #00c3ff;
-  border-bottom-color: #008cff;
-  border-left-color: #00e0ff;
-  clip-path: inset(0 100% 100% 0);
-  transition: clip-path 0.8s linear;
-}
-
-.placeorder-right::after {
-  border-color: #f87171;
-  clip-path: inset(100% 0 0 100%);
-  transition: clip-path 0.8s linear 0.8s; /* delay for sequential effect */
-}
-
-.placeorder-right:hover::before {
-  clip-path: inset(0 0 0 0);
-}
-
-.placeorder-right:hover::after {
-  clip-path: inset(0 0 0 0);
-}
 
 
 .cart-total {
