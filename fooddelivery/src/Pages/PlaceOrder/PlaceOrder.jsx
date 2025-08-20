@@ -1,16 +1,18 @@
 import React, { useState,useContext } from 'react';
 import './PlaceOrder.css';
 import { StoreContext } from '../../context/StoreContext'; // Adjusted path
+import Swal from "sweetalert2";
+import { useNavigate } from 'react-router-dom';
 
 
 
 const PlaceOrder = () => {
-  const [form, setForm] = useState({
+ const [form, setForm] = useState({
     name: '',
     address: '',
     phone: '',
     payment: 'cod',
-    note: ''
+    note: '',
   });
 
   const handleChange = (e) => {
@@ -19,8 +21,23 @@ const PlaceOrder = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Place order logic here
-    alert('Order placed successfully!');
+
+    // Show sweet alert
+    Swal.fire({
+      title: 'Order Placed!',
+      text: 'Your order has been placed successfully.',
+      icon: 'success',
+      confirmButtonText: 'OK',
+    });
+
+    // Reset form
+    setForm({
+      name: '',
+      address: '',
+      phone: '',
+      payment: 'cod',
+      note: '',
+    });
   };
 
 
