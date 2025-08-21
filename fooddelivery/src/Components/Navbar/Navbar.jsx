@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useRef, useEffect} from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/frontend_assets/assets'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { StoreContext } from '../../Context/StoreContext';
 import { Link } from 'react-router-dom'
 
@@ -19,6 +19,27 @@ const Navbar = ({setShowLogin}) => {
   
 
 
+const [showInput, setShowInput] = useState(false);
+  const inputRef = useRef(null);
+
+  const handleClick = () => {
+    setShowInput(true); // show input when icon clicked
+  };
+
+  // Close input when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (inputRef.current && !inputRef.current.contains(event.target)) {
+        setShowInput(false); // hide input, show icon again
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
 
 
   return (
@@ -32,7 +53,27 @@ const Navbar = ({setShowLogin}) => {
      </ul>
 
      <div className="navbar-right">
-      <img src={assets.search_icon} alt="Search icon" />
+ <div className="main-search" ref={inputRef}>
+      {/* Show search icon only when input is hidden */}
+      {!showInput && (
+        <img
+          src={assets.search_icon}
+          alt="Search icon"
+          onClick={handleClick}
+          style={{ cursor: "pointer" }}
+        />
+      )}
+
+      {/* Show input only when state is true */}
+      {showInput && (
+        <input
+          type="text"
+          placeholder="Search..."
+          className="search-input"
+          autoFocus
+        />
+      )}
+    </div>
 
 
     <div className='navbar-search-icon'>
