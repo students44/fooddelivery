@@ -1,7 +1,6 @@
 import React, { useContext, useState, useRef, useEffect} from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/frontend_assets/assets'
-// import { useState } from 'react'
 import { StoreContext } from '../../Context/StoreContext';
 import { Link } from 'react-router-dom'
 
