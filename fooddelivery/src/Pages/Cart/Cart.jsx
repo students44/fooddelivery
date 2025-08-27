@@ -49,12 +49,12 @@ const Cart = () => {
 
                     {/* actions in same cell */}
           <td>
-            <div style={{ display: "flex", gap: "8px", justifyContent: "center" }}>
+            <div style={{ display: "flex", gap: "8px", justifyContent: "start" }}>
               <button
                 onClick={() => removeFromCart(item._id)}
                 className="remove-item"
               >
-                Remove
+                Remove 1 qty
               </button>
 
               <button
