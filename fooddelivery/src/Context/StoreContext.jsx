@@ -43,6 +43,14 @@ const StoreContextProvider = ({ children }) => {
         }
         return totalAmount;
     };
+    const deleteFromCart = (id) => {
+  setCartItems(prev => {
+    const updated = { ...prev };
+    delete updated[id]; // remove item fully
+    return updated;
+  });
+};
+
 
     // Provide value to children
     const contextValue = {
@@ -50,6 +58,7 @@ const StoreContextProvider = ({ children }) => {
         cartItems,
         addToCart,
         removeFromCart,
+         deleteFromCart,
         clearCart,      // <-- Added this
         getTotalItems
     };
